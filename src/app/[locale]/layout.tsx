@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Directions, LANGUAGES } from "@/constants/enum";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const tajawal = Tajawal({
   subsets: ["latin", "arabic"],
@@ -42,10 +43,20 @@ export default async function RootLayout({
 
   const isArabic = locale === LANGUAGES.ARABIC;
   return (
-    <html lang={locale} dir={isArabic ? Directions.RTL : Directions.LTR}>
+    <html
+      lang={locale}
+      dir={isArabic ? Directions.RTL : Directions.LTR}
+      suppressHydrationWarning
+    >
       <body className={`${tajawal.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          <main>{children}</main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            disableTransitionOnChange
+          >
+            <main className="dark">{children}</main>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
