@@ -2,5 +2,50 @@
   "HomePage": {
     "title": "مرحبا",
     "about": "Go to the about page"
+  },
+
+  "sidebar": {
+    "labels": {
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "orders": "الطلبات",
+      "customers": "العملاء",
+      "reports": "التقارير",
+      "questions_reviews": "الأسئلة والتقييمات",
+      "info_pages": "الصفحات التعريفية",
+      "marketing_tools": "الأدوات التسويقية",
+      "new": "جديد",
+      "channels": "قنوات البيع",
+      "sale_point": "سلة بوينت",
+      "local": "محلي",
+      "support_tools": "أدوات مساندة",
+      "merchant_services": "خدمات التاجر",
+      "influencers": "المؤثرين",
+      "sweeply_ads": "اعلانات سويبلي",
+      "settings": "الاعدادات",
+      "store_package": "باقة المتجر",
+      "store_settings": "إعدادات المتجر",
+      "wallet_invoices": "المحفظة والفواتير",
+      "store_appearance": "مظهر المتجر",
+      "theme_store": "متجر الثيمات",
+      "store_design": "تصميم المتجر",
+      "app_builder": "صانع التطبيقات",
+      "app_store": "متجر التطبيقات",
+      "installed_apps": "التطبيقات المثبتة",
+      "visit_app_store": "زيارة متجر التطبيقات",
+      "merchant_app": "تطبيق التاجر",
+      "google_play": "جوجول بلاي",
+      "app_store_label": "app store"
+    },
+    "store": {
+      "special": "سبيشل",
+      "alt": "متجر الهدايا",
+      "gift_store": "متجر الهدايا",
+      "visit_store": "زيارة متجر"
+    },
+    "alts": {
+      "google_play": "جوجول بلاي",
+      "app_store": "اب ستور"
+    }
   }
 }

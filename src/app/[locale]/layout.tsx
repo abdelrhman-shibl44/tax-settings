@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Directions, LANGUAGES } from "@/constants/enum";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Header from "@/component/header";
+import Sidebar from "@/component/sidebar";
 
 const tajawal = Tajawal({
   subsets: ["latin", "arabic"],
@@ -55,7 +57,13 @@ export default async function RootLayout({
             defaultTheme="light"
             disableTransitionOnChange
           >
-            <main className="dark">{children}</main>
+            <div className="w-full h-14">
+              <Header />
+            </div>
+            <div className="min-h-[calc(100vh-56px)] fixed start-0 bottom-0 top-14 z-[3000] min-w-[260px] bg-primary">
+              <Sidebar />
+            </div>
+            <main className="dark ms-64">{children}</main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

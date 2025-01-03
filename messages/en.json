@@ -1,6 +1,51 @@
 {
   "HomePage": {
-    "title": "Hello world!",
+    "title": "Welcome",
     "about": "Go to the about page"
+  },
+
+  "sidebar": {
+    "labels": {
+      "home": "Home",
+      "products": "Products",
+      "orders": "Orders",
+      "customers": "Customers",
+      "reports": "Reports",
+      "questions_reviews": "Questions and Reviews",
+      "info_pages": "Info Pages",
+      "marketing_tools": "Marketing Tools",
+      "new": "New",
+      "channels": "Sales Channels",
+      "sale_point": "Salla Point",
+      "local": "Local",
+      "support_tools": "Support Tools",
+      "merchant_services": "Merchant Services",
+      "influencers": "Influencers",
+      "sweeply_ads": "Sweeply Ads",
+      "settings": "Settings",
+      "store_package": "Store Package",
+      "store_settings": "Store Settings",
+      "wallet_invoices": "Wallet and Invoices",
+      "store_appearance": "Store Appearance",
+      "theme_store": "Theme Store",
+      "store_design": "Store Design",
+      "app_builder": "App Builder",
+      "app_store": "App Store",
+      "installed_apps": "Installed Apps",
+      "visit_app_store": "Visit App Store",
+      "merchant_app": "Merchant App",
+      "google_play": "Google Play",
+      "app_store_label": "App Store"
+    },
+    "store": {
+      "special": "Special",
+      "alt": "Gift Store",
+      "gift_store": "Gift Store",
+      "visit_store": "Visit Store"
+    },
+    "alts": {
+      "google_play": "Google Play",
+      "app_store": "App Store"
+    }
   }
 }

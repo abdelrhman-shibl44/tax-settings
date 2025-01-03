@@ -38,7 +38,7 @@ export function LanguageSwitcher() {
           <span className="text-sm font-medium">
             {new URL(window.location.href).pathname
               .split("/")[1]
-              ?.toUpperCase() || "EN"}
+              ?.toUpperCase() || "AR"}
           </span>
         </Button>
       </DropdownMenuTrigger>
