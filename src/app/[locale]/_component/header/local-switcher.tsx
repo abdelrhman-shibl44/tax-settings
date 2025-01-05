@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const languages = [
   { code: "en", label: "English" },
@@ -19,6 +20,7 @@ const languages = [
 export function LanguageSwitcher() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const switchLanguage = (locale: string) => {
     setIsOpen(false);
@@ -31,23 +33,26 @@ export function LanguageSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="h-8 w-16 px-2 text-gray-700 hover:bg-gray-100"
+          className="text-center flex flex-row-reverse group md:p-0"
         >
-          <Globe className="h-4 w-4 mr-1" />
-          {/* Show current language code in uppercase */}
-          <span className="text-sm font-medium">
-            {new URL(window.location.href).pathname
-              .split("/")[1]
-              ?.toUpperCase() || "AR"}
-          </span>
+          <div className="rounded-full md:border border-secondary-50 text-white group-hover:text-black md:text-primary-1 md:p-2.5">
+            <Globe />
+          </div>
+          {isMobile && (
+            <span className="text-sm">
+              {new URL(window.location.href).pathname
+                .split("/")[1]
+                ?.toUpperCase() || "AR"}
+            </span>
+          )}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-32">
+      <DropdownMenuContent align="end" className="w-32 bg-white z-[9999]">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language.code}
             onClick={() => switchLanguage(language.code)}
-            className="text-sm cursor-pointer hover:text-[#FF3D00] hover:bg-gray-50"
+            className="text-sm cursor-pointer hover:text-ring hover:bg-gray-50"
             dir={language.dir}
           >
             {language.label}

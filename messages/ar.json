@@ -47,5 +47,33 @@
       "google_play": "جوجول بلاي",
       "app_store": "اب ستور"
     }
+  },
+  "navbar": {
+    "plateFormUpdates": "تحديثات المنصة",
+    "giftStore": "متجر الهدايا",
+    "platformUpdates": "تحديثات المنصة",
+    "profile": "الملف الشخصي",
+    "notifications": "التنبيهات",
+    "suggestions": "الاقتراحات",
+    "loyaltyPoints": "نقاط الولاء",
+    "dayMode": "وضع النهار",
+    "nightMode": "وضع الليل",
+    "logOut": "تسجيل الخروج"
+  },
+  "searchForm": {
+    "placeholder": {
+      "requests": "ابحث برقم الطلب , اسم العميل , رقم الشحنة",
+      "products": "ابحث باسم المنتج ,اسم التصنيف , وصف المنتج أو ال SKU",
+      "clients": "ابحث بإسم العميل , رقم الحوالة"
+    },
+    "tooltipMessage": {
+      "requests": "للحث عن أكتر من طلب يرجي الإلتزام بالصيغة التالية :[رقم الطلب , رقم الطلب , رقم الطلب...] الحد الأقصي هو 15 طلب"
+    },
+    "selectOption": "اختر خياراً",
+    "requests": "الطلبات",
+    "products": "المنتجات",
+    "clients": "العملاء",
+    "searchButton": "بحث",
+    "loading": "جاري التحميل..."
   }
 }

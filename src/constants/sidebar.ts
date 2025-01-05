@@ -1,7 +1,7 @@
 // links.ts or links.tsx
 import { getTranslations } from "next-intl/server";
 
-export async function getLinks() {
+export default async function getLinks() {
   const t = await getTranslations("sidebar.labels");
   const alts = await getTranslations("sidebar.alts");
 
@@ -121,5 +121,15 @@ export async function getLinks() {
         },
       ],
     },
+  ];
+}
+
+export async function getOptionsLinks() {
+  const t = await getTranslations("navbar");
+  return [
+    { name: t("profile"), icon: "CreditCard" },
+    { name: t("platformUpdates"), icon: "User" },
+    { name: t("notifications"), icon: "ChevronDown" },
+    { name: t("suggestions"), icon: "Keyboard" },
   ];
 }

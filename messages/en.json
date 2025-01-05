@@ -47,5 +47,35 @@
       "google_play": "Google Play",
       "app_store": "App Store"
     }
+  },
+
+  "navbar": {
+    "plateFormUpdates": "PlateForm Updates",
+    "giftStore": "Gift Store",
+    "platformUpdates": "Platform Updates",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "suggestions": "Suggestions",
+    "loyaltyPoints": "Loyalty Points",
+    "dayMode": "Day Mode",
+    "nightMode": "Night Mode",
+    "logOut": "Log Out"
+  },
+
+  "searchForm": {
+    "placeholder": {
+      "requests": "Search by order number, client name, shipment number",
+      "products": "Search by product name, category name, product description, or SKU",
+      "clients": "Search by client name, transfer number"
+    },
+    "tooltipMessage": {
+      "requests": "To search for multiple orders, please follow this format: [order number, order number, order number...]. The maximum limit is 15 orders."
+    },
+    "selectOption": "Select an option",
+    "requests": "Requests",
+    "products": "Products",
+    "clients": "Clients",
+    "searchButton": "Search",
+    "loading": "Loading..."
   }
 }

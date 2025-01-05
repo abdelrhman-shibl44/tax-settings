@@ -42,6 +42,9 @@ export default {
             300: "hsl(var(--accent-dark-300))",
           },
         },
+        gray: {
+          light: "hsl(var(--gray-light))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
