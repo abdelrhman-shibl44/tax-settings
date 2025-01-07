@@ -14,6 +14,7 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 import { useLocale, useTranslations } from "next-intl";
 import { LANGUAGES } from "@/constants/enum";
 import { onSearch } from "@/app/[locale]/_actions/searchForm";
+import { cn } from "@/lib/utils";
 
 // Define types for options
 type Option = {
@@ -28,7 +29,7 @@ type Options = {
   clients: Option;
 };
 
-export default function SearchForm() {
+export default function SearchForm({ className }: { className: string }) {
   const t = useTranslations("searchForm");
   const lang = useLocale();
   const isAr = lang === LANGUAGES.ARABIC;
@@ -58,18 +59,21 @@ export default function SearchForm() {
     <form
       action={formAction}
       // onSubmit={handleSearch}
-      className="hidden md:flex items-center min-w-48 w-[300px]! md:w-[400px] lg:w-[580px]"
+      className={cn(
+        "flex items-center min-w-48 w-[300px]! md:w-[400px] lg:w-[580px]",
+        className
+      )}
     >
       {/* Input Field */}
-      <div className="relative flex-1">
+      <div className="relative flex-1 border border-gray-200 rounded-md rounded-e-none border-s-1 h-9 flex flex-row-reverse items-center p-2">
         <Input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder={options[selectedOption]?.placeholder ?? ""}
-          className="pl-10 rounded-e-none"
+          className="ps-2 rounded-s-none border-none focus-visible:ring-0"
         />
-        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl">
+        <span className=" text-xl">
           {options[selectedOption]?.tooltipMessage ? (
             <Tooltip.Provider>
               <Tooltip.Root>
@@ -91,7 +95,7 @@ export default function SearchForm() {
         value={selectedOption}
         onValueChange={(value) => setSelectedOption(value as keyof Options)}
       >
-        <SelectTrigger className="w-32 rounded-none border-r-0">
+        <SelectTrigger className="w-32 rounded-none border-r-0 border-gray-200 focus:ring-0">
           <SelectValue placeholder="Select an option" />
         </SelectTrigger>
         <SelectContent>
@@ -105,7 +109,7 @@ export default function SearchForm() {
       <Button
         type="submit"
         disabled={isPending}
-        className="flex items-center rounded-s-none bg-secondary-50 text-primary-1"
+        className="flex items-center rounded-s-none bg-secondary-50 text-primary-1 hover:bg-secondary-50"
       >
         {isPending ? (
           <Loader className="animate-spin" />

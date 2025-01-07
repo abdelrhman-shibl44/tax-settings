@@ -18,11 +18,13 @@
       "channels": "Sales Channels",
       "sale_point": "Salla Point",
       "local": "Local",
+      "help": "help",
       "support_tools": "Support Tools",
       "merchant_services": "Merchant Services",
       "influencers": "Influencers",
       "sweeply_ads": "Sweeply Ads",
       "settings": "Settings",
+      "vat": "Vat",
       "store_package": "Store Package",
       "store_settings": "Store Settings",
       "wallet_invoices": "Wallet and Invoices",
@@ -77,5 +79,70 @@
     "clients": "Clients",
     "searchButton": "Search",
     "loading": "Loading..."
+  },
+
+  "vat": {
+    "addTax": "Add Tax",
+    "vatHeader": "Value-Added Tax (VAT)",
+    "taxNumber": "Tax Number for the Organization (546987552)",
+    "linkToAuthority": "Direct connection with the Zakat, Tax, and Customs Authority",
+    "link": "Link",
+    "shippingFeeExcludesTax": "Shipping service fees do not include VAT",
+    "showPricesIncludingTax": "Show product prices including tax",
+    "countriesTaxPercentage": "All Countries",
+
+    "dialog": {
+      "create": "Create",
+      "update": "Update",
+      "save": "Save",
+      "delete": "Delete",
+      "selectCountry": "Select Country...",
+      "searchFramework": "Search framework...",
+      "noFrameworkFound": "No framework found."
+    },
+
+    "countries": {
+      "all": "All Countries",
+      "sa": "Saudi Arabia",
+      "ae": "United Arab Emirates",
+      "kw": "Kuwait",
+      "qa": "Qatar",
+      "bh": "Bahrain",
+      "iq": "Iraq",
+      "eg": "Egypt",
+      "jo": "Jordan",
+      "lb": "Lebanon",
+      "sy": "Syria",
+      "om": "Oman",
+      "ye": "Yemen",
+      "ly": "Libya",
+      "sd": "Sudan",
+      "ma": "Morocco",
+      "dz": "Algeria",
+      "tn": "Tunisia",
+      "ps": "Palestine",
+      "mr": "Mauritania",
+      "cm": "Cameroon",
+      "ng": "Nigeria",
+      "gh": "Ghana",
+      "ke": "Kenya"
+    },
+    "input": {
+      "taxPlaceholder": "Tax Percentage"
+    },
+
+    "change-settings-dialog": {
+      "text_btn": "Change Settings",
+      "tax_number": "Tax Number",
+      "enter_tax_number": "Enter the tax number",
+      "verify_with_platform": "Verify through the Zakat, Tax, and Customs Authority platform",
+      "business_tax_number": "Business Tax Number",
+      "display_tax_number": "Display the tax number below the store",
+      "display_tax_number_note": "The tax number will be displayed to users below the store.",
+      "display_tax_icon": "Display the tax certificate icon below the store",
+      "display_tax_icon_note": "The tax certificate icon will be displayed to users below the store.",
+      "save": "Save",
+      "close": "Close"
+    }
   }
 }

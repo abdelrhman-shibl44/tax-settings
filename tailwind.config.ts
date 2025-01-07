@@ -39,11 +39,13 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           dark: {
+            200: "hsl(var(--accent-dark-200))",
             300: "hsl(var(--accent-dark-300))",
           },
         },
         gray: {
           light: "hsl(var(--gray-light))",
+          25: "hsl(var(--gray-25))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

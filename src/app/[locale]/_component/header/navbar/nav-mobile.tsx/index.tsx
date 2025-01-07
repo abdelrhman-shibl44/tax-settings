@@ -102,7 +102,7 @@ const NavMobile = ({
             } text-right text-ring text-sm focus-visible:outline-none py-2.5 px-[15px] cursor-pointer`}
           >
             <LogOut size={20} />
-            <Button className="font-bold text-ring shadow-none mt-0 pt-0">
+            <Button className="font-bold text-ing shadow-none mt-0 pt-0">
               {t("logOut")}
             </Button>
           </DropdownMenuItem>

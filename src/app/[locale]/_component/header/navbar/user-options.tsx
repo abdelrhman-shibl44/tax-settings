@@ -25,7 +25,7 @@ const UserOptions = async () => {
   const isAr = lang === LANGUAGES.ARABIC;
 
   return (
-    <div className="flex items-center gap-1 md:gap-3 lg:justify-end flex-wrap">
+    <div className="flex items-center gap-1 md:gap-3 flex-wrap">
       <Link
         href=""
         className="rounded-full border text-primary-1 border-secondary-50 p-2"
@@ -60,7 +60,7 @@ const UserOptions = async () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align={`${isAr ? "start" : "end"}`}
-            className="w-48 shadow-md"
+            className="w-48 shadow-md bg-white"
           >
             <DropdownMenuGroup className="flex flex-col">
               {optionLinks.map((link, i) => (

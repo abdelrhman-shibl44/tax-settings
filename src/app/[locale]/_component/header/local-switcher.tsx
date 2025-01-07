@@ -9,8 +9,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { usePathname, useRouter } from "@/i18n/routing";
 
 const languages = [
   { code: "en", label: "English" },
@@ -21,10 +21,11 @@ export function LanguageSwitcher() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
+  const pathname = usePathname();
 
   const switchLanguage = (locale: string) => {
     setIsOpen(false);
-    router.push(`/${locale}`);
+    router.replace(`/${pathname}`, { locale });
   };
 
   return (
@@ -38,13 +39,12 @@ export function LanguageSwitcher() {
           <div className="rounded-full md:border border-secondary-50 text-white group-hover:text-black md:text-primary-1 md:p-2.5">
             <Globe />
           </div>
-          {isMobile && (
-            <span className="text-sm">
-              {new URL(window.location.href).pathname
-                .split("/")[1]
-                ?.toUpperCase() || "AR"}
-            </span>
-          )}
+
+          <span className="text-sm md:hidden">
+            {new URL(window.location.href).pathname
+              .split("/")[1]
+              ?.toUpperCase() || "AR"}
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-32 bg-white z-[9999]">

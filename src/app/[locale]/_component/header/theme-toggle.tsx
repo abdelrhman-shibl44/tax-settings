@@ -44,7 +44,7 @@ export function ThemeToggle({
           variant={variant ?? "outline"}
           size="default"
           className={cn(
-            "rounded-full border-secondary-50 text-primary-1 md:w-9 h-9",
+            "rounded-full border-secondary-50 bg-transparent text-primary-1 md:w-9 h-9",
             className
           )}
         >

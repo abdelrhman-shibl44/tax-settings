@@ -47,9 +47,12 @@
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --gray-light: 0, 0%, 96%;
+    --gray-25: 0, 0%, 97%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
+    --accent-dark-200: 0, 0%, 40%;
     --accent-dark-300: 0, 0%, 27%;
+    --accent-dark-25: 0, 0%, 97%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.86;
