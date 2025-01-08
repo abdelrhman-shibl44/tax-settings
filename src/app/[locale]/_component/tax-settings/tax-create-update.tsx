@@ -42,13 +42,13 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
 
   return (
     <>
-      <DialogOverlay className="fixed inset-0 bg-primary-1 opacity-40 z-[9999]" />
+      <DialogOverlay className="fixed inset-0 bg-primary opacity-40 z-[9999]" />
       <DialogContent
         dir={locale}
-        className="top-36 sm:max-w-[798px] w-full bg-white z-[9999] p-0 gap-0"
+        className="top-36 sm:max-w-[798px] w-full bg-white dark:bg-[#272727] z-[9999] p-0 gap-0"
         hideCloseButton
       >
-        <DialogHeader className="bg-secondary-50 rounded-md text-primary-1 py-[15px] px-5 text-start">
+        <DialogHeader className="bg-secondary-50 dark:bg-[#2c2c2c] rounded-md text-primary dark:text-[#ddd] py-[15px] px-5 text-start">
           <DialogTitle className="text-[15px] flex items-center justify-start">
             {isEdit ? t("dialog.update") : t("dialog.create")}
           </DialogTitle>
@@ -59,14 +59,14 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
             <X size={20} />
           </DialogClose>
         </DialogHeader>
-        <div className="grid gap-4 p-5">
+        <div className="grid gap-4 p-5 text-[#bbb]">
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="justify-between w-full"
+                className="justify-between w-full dark:border-[#444]"
               >
                 {value
                   ? countries.find((country) => country.name === value)?.name
@@ -74,11 +74,11 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="p-0 z-[9999]  w-[750px] inline-block">
-              <Command className="w-full">
+            <PopoverContent className="p-0 z-[9999] w-[750px] inline-block">
+              <Command className="w-full text-[#bbb] dark:bg-[#272727] rounded-none">
                 <CommandInput />
                 <CommandEmpty>No framework found.</CommandEmpty>
-                <CommandList>
+                <CommandList className="dark:bg-[#333]">
                   <CommandGroup>
                     {countries?.map((country) => (
                       <CommandItem
@@ -94,7 +94,7 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
                         <span
                           className={`${
                             country.name === value
-                              ? "text-primary-1"
+                              ? "text-primary"
                               : "cursor-pointer"
                           }`}
                         >
@@ -108,17 +108,14 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
             </PopoverContent>
           </Popover>
 
-          <div
-            // dir={locale}
-            className="flex items-center border border-gray-200 rounded-md w-full bg-white"
-          >
+          <div className="flex items-center border border-gray-200  dark:border-[#444] rounded-md w-full ">
             <Input
               dir={locale}
               id="tax-number"
               maxLength={30}
               type="number"
               placeholder={t("taxNumber")}
-              className="w-full border-none text-accent-dark-200 !text-xs shadow-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 rounded-none px-2"
+              className="w-full border-none text-accent-dark-200 !text-xs shadow-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 rounded-e-none px-2"
             />
             <div className="px-3 flex items-center border h-full">
               <FaPercentage size={18} className="text-gray-400" />
@@ -127,10 +124,10 @@ const TaxCreateUpdate = ({ mode, countries }: TaxCreateUpdate) => {
         </div>
 
         {/* Footer Section */}
-        <DialogFooter className="p-5 flex !justify-between items-center py-[14px] px-5 bg-gray-100">
+        <DialogFooter className="p-5 flex !justify-between items-center py-[14px] px-5 bg-gray-100 dark:bg-[#2c2c2c] ">
           <Button
             size={"lg"}
-            className="bg-secondary-50 text-primary-1 shadow-none hover:bg-secondary-50"
+            className="bg-secondary-50 text-primary shadow-none hover:bg-secondary-50"
             type="submit"
           >
             {isEdit ? t("dialog.save") : t("dialog.update")}

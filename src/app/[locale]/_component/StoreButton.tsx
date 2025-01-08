@@ -44,7 +44,7 @@ const StoreButton = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="bg-secondary-50 hover:bg-secondary-50 text-primary-1 h-full py-1 pe-2 rounded-e-full relative">
+        <Button className="bg-secondary-50 hover:bg-secondary-50 text-primary h-full py-1 pe-2 rounded-e-full relative">
           {urlStored ? <Check /> : <Share2 size={12} />}
         </Button>
       </DropdownMenuTrigger>

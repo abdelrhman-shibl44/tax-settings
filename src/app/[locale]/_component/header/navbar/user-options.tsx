@@ -28,14 +28,14 @@ const UserOptions = async () => {
     <div className="flex items-center gap-1 md:gap-3 flex-wrap">
       <Link
         href=""
-        className="rounded-full border text-primary-1 border-secondary-50 p-2"
+        className="rounded-full border text-link-color border-secondary-50 p-2"
       >
         <Gift size={19} />
       </Link>
       <ThemeToggle />
       <LanguageSwitcher />
       <Link href={""} className="flex flex-row-reverse gap-3 items-center">
-        <span className="text-accent-dark-300 text-sm">
+        <span className="text-accent-dark-300 dark:text-[#ddd] text-sm">
           {t("platformUpdates")}
         </span>
         <AnimatedPing className="hidden lg:flex" />
@@ -53,14 +53,14 @@ const UserOptions = async () => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="flex items-center justify-start text-sm text-accent-dark-300 bg-transparent shadow-none">
+            <Button className="flex items-center justify-start text-sm text-accent-dark-300 dark:text-[#ddd] bg-transparent shadow-none">
               <span>{t("giftStore")}</span>
               <ChevronDown size={15} className="mt-2" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align={`${isAr ? "start" : "end"}`}
-            className="w-48 shadow-md bg-white"
+            className="w-48 shadow-md bg-white dark:bg-[#333]"
           >
             <DropdownMenuGroup className="flex flex-col">
               {optionLinks.map((link, i) => (
@@ -78,7 +78,7 @@ const UserOptions = async () => {
               ))}
             </DropdownMenuGroup>
             <DropdownMenuSeparator className="text-accent-dark-300 w-full" />
-            <DropdownMenuItem className="flex items text-sm mt-2 gap-3 text-ring p-3 focus-visible:outline-none hover:bg-gray-light ">
+            <DropdownMenuItem className="flex items text-sm mt-2 gap-3 text-[#d22626] p-3 focus-visible:outline-none hover:bg-gray-light ">
               <LogOut size={20} />
               <span>{t("logOut")}</span>
             </DropdownMenuItem>

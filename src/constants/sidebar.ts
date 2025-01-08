@@ -164,7 +164,6 @@ export default async function getLinks() {
       nestedLinks: [
         {
           id: crypto.randomUUID(),
-          label: t("google_play"),
           img: "https://cdn.assets.salla.network/prod/admin/cp/assets/images/googleplay.png",
           href: "https://play.google.com/store/apps/details?id=com.emoney.sallacp",
           alt: alts("google_play"),
@@ -172,7 +171,6 @@ export default async function getLinks() {
         },
         {
           id: crypto.randomUUID(),
-          label: t("app_store_label"),
           img: "https://cdn.assets.salla.network/prod/admin/cp/assets/images/appstore.png",
           href: "https://itunes.apple.com/sa/app/slt-ttbyq-altajr/id1148458340?mt=8",
           alt: alts("app_store"),

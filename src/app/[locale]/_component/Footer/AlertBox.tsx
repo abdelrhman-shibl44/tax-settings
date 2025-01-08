@@ -7,10 +7,10 @@ const AlertBox = async () => {
   const t = await getTranslations("alertBox");
 
   return (
-    <div className="fixed w-full bg-primary-1 bottom-0 p-0 border-t-4 border-[rgba(30,47,50,.3)] z-[9999]">
-      <div className="container text-center text-white flex justify-center items-center gap-10 text-sm py-2">
+    <div className="fixed w-full bg-primary bottom-0 p-0 border-t-4 border-[rgba(30,47,50,.3)] z-[9999]">
+      <div className="container text-center text-white flex justify-center items-center gap-2 md:gap-10 text-sm py-2">
         <article>
-          <span className="ms-[260px]">
+          <span className="text-start">
             <b>{t("message")}</b>
           </span>
         </article>
@@ -19,7 +19,7 @@ const AlertBox = async () => {
           className={`${buttonVariants({
             size: "lg",
             variant: "secondary",
-          })} btn-tiffany btn-xlg ml-20 text-bold text-style-none`}
+          })} btn-tiffany btn-xl px-1 max-sm:w-[40%] text-bold text-style-none`}
         >
           {t("buttonText")}
         </Link>

@@ -16,7 +16,7 @@ const Sidebarheader = () => {
         className="relative w-16 h-16"
       >
         <span
-          className={`absolute -top-1 ${
+          className={`absolute -top-1 dark:text-black ${
             isAr ? "end-1/2" : "start-1/2"
           } transform -translate-x-1/2 bg-colorYellow z-50 text-xs pt-[2px] pb-0.5 min-w-[76px] rounded-full text-center flex justify-around items-center ${
             !isAr ? "flex-row-reverse" : ""

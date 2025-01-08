@@ -17,13 +17,13 @@ const TaxSettingsTable = ({
   return (
     <table className="w-full">
       <tbody>
-        <tr className="border-t border-t-gray-25 text-sm text-accent-dark-300">
+        <tr className="border-t border-t-gray-25 dark:border-[#333] text-sm text-accent-dark-300 dark:[#ccc]">
           <td className="py-3 px-5">{t("taxNumber")}</td>
           <td className="text-left">
             <ChangeSettigsBtn />
           </td>
         </tr>
-        <tr className="border-t border-t-gray-25 text-sm text-accent-dark-300">
+        <tr className="border-t border-t-gray-25 dark:border-[#333] text-sm text-accent-dark-300 dark:[#ccc]">
           <td className="py-3 px-5">{t("linkToAuthority")}</td>
           <td className="text-left">
             <Link
@@ -34,24 +34,24 @@ const TaxSettingsTable = ({
             </Link>
           </td>
         </tr>
-        <tr className="border-t border-t-gray-25 text-sm text-accent-dark-300">
+        <tr className="border-t border-t-gray-25 dark:border-[#333] text-sm text-accent-dark-300 dark:[#ccc]">
           <td className="py-3 px-5">{t("shippingFeeExcludesTax")}</td>
           <td className="text-left px-5">
             <Switch
-              // dir={locale}
+              dir={locale}
               className="!bg-transparent"
               lang={locale}
               id="tax-icon-switch"
             />
           </td>
         </tr>
-        <tr className="border-t border-t-gray-25 text-sm text-accent-dark-300">
+        <tr className="border-t border-t-gray-25 dark:border-[#333] text-sm text-accent-dark-300 dark:[#ccc]">
           <td className="py-3 px-5">{t("showPricesIncludingTax")}</td>
           <td className="text-left px-5">
             <Switch dir={locale} lang={locale} id="tax-icon-switch" />
           </td>
         </tr>
-        <tr className="border-t border-t-gray-25 text-sm text-accent-dark-300">
+        <tr className="border-t border-t-gray-25 dark:border-[#333] text-sm text-accent-dark-300 dark:[#ccc]">
           <td className="py-3 px-5">
             <Dialog>
               <DialogTrigger asChild>

@@ -40,7 +40,7 @@ export default function SearchForm({ className }: { className: string }) {
   const options: Options = {
     requests: {
       placeholder: t("placeholder.requests"),
-      icon: <AlertCircle size={18} className="text-primary" />,
+      icon: <AlertCircle size={18} className="text-link-color" />,
       tooltipMessage: t("tooltipMessage.requests"),
     },
     products: {
@@ -65,7 +65,7 @@ export default function SearchForm({ className }: { className: string }) {
       )}
     >
       {/* Input Field */}
-      <div className="relative flex-1 border border-gray-200 rounded-md rounded-e-none border-s-1 h-9 flex flex-row-reverse items-center p-2">
+      <div className="relative flex-1 border border-gray-200 dark:border-[#444] rounded-md rounded-e-none border-s-1 h-9 flex flex-row-reverse items-center p-2">
         <Input
           type="text"
           value={inputValue}
@@ -80,7 +80,7 @@ export default function SearchForm({ className }: { className: string }) {
                 <Tooltip.Trigger asChild>
                   <span>{options[selectedOption].icon}</span>
                 </Tooltip.Trigger>
-                <Tooltip.Content className="p-2 bg-secondary-50 text-primary-1 max-w-48 rounded mt-3 text-xs">
+                <Tooltip.Content className="p-2 bg-secondary-50 text-primary max-w-48 rounded mt-3 text-xs">
                   {options[selectedOption].tooltipMessage}
                 </Tooltip.Content>
               </Tooltip.Root>
@@ -95,7 +95,7 @@ export default function SearchForm({ className }: { className: string }) {
         value={selectedOption}
         onValueChange={(value) => setSelectedOption(value as keyof Options)}
       >
-        <SelectTrigger className="w-32 rounded-none border-r-0 border-gray-200 focus:ring-0">
+        <SelectTrigger className="w-32 rounded-none border-r-0 border-gray-200 dark:border-[#444] focus:ring-0">
           <SelectValue placeholder="Select an option" />
         </SelectTrigger>
         <SelectContent>
@@ -109,7 +109,7 @@ export default function SearchForm({ className }: { className: string }) {
       <Button
         type="submit"
         disabled={isPending}
-        className="flex items-center rounded-s-none bg-secondary-50 text-primary-1 hover:bg-secondary-50"
+        className="flex items-center rounded-s-none bg-secondary-50 text-primary hover:bg-secondary-50"
       >
         {isPending ? (
           <Loader className="animate-spin" />

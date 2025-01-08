@@ -9,8 +9,6 @@ export async function onSearch(prevState: FormState, data: FormData) {
   const searchInput = data.get("searchInput") as string;
   const selectedOption = data.get("selectedOption") as string;
 
-  console.log(data);
-
   // Simulate search logic (you can replace this with actual search logic)
   await new Promise((resolve) => setTimeout(resolve, 1000));
 

@@ -19,7 +19,7 @@ export default async function Vat() {
               <Button
                 size={"lg"}
                 variant={"secondary"}
-                className="rounded-full p-5"
+                className="rounded-full p-5 text-primary"
               >
                 <Plus />
                 {t("addTax")}
@@ -29,10 +29,10 @@ export default async function Vat() {
           <TaxCreateUpdate mode="create" countries={countries} />
         </Dialog>
       </div>
-      <div className="border border-gray-200 p-3 rounded-md mt-3">
+      <div className="border border-gray-200 dark:border-[#333] rounded-md mt-3">
         <div>
-          <header className="px-4 py-4">
-            <h6 className="text-[17px] text-accent-dark-200">
+          <header className="p-5 dark:bg-[#2c2c2c] rounded-md">
+            <h6 className="text-[17px] text-accent-dark-200 dark:text-[#bbb] ">
               {t("vatHeader")}
             </h6>
           </header>

@@ -11,13 +11,13 @@ const Header = async () => {
       {
         /* Sidebar-like section */
         <div className="hidden md:flex">
-          <Logo className="w-[260px] bg-primary" />
+          <Logo className="w-[260px] bg-primary dark:bg-[#212121]" />
         </div>
       }
       {/* for mobile */}
       <NavMobile optionLinks={optionLinks} />
       {/* Navbar Section */}
-      <div className="hidden md:flex flex-1 ms-[260px] min-h-14 py-5 items-baseline">
+      <div className="hidden md:flex flex-1 ms-[260px] h-full py-2">
         <Navbar />
       </div>
     </header>

@@ -24,7 +24,6 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          1: "hsl(var(--primary-1))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -71,6 +70,10 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        link: {
+          color: "hsl(var(--link-color))",
+          hover: "hsl(var(--link-hover))",
         },
       },
       borderRadius: {

@@ -36,7 +36,7 @@ export function LanguageSwitcher() {
           size="sm"
           className="text-center flex flex-row-reverse group md:p-0"
         >
-          <div className="rounded-full md:border border-secondary-50 text-white group-hover:text-black md:text-primary-1 md:p-2.5">
+          <div className="rounded-full md:border border-secondary-50 text-white md:text-link-color md:p-2.5">
             <Globe />
           </div>
 
@@ -47,7 +47,7 @@ export function LanguageSwitcher() {
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-32 bg-white z-[9999]">
+      <DropdownMenuContent align="end" className="w-32 z-[9999]">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language.code}

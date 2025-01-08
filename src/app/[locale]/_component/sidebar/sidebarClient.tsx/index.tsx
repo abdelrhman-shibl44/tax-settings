@@ -11,7 +11,6 @@ import { RefObject, useRef } from "react";
 import useClickoutside from "@/components/ui/useClickoutside";
 import Mask from "@/components/ui/mask";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { SidebarHeader } from "@/components/ui/sidebar";
 import Sidebarheader from "../sidbarHeader";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -32,7 +31,7 @@ const SidebarClient = ({ links }: { links: any }) => {
       )}
       <aside
         ref={sidebarRef}
-        className={`overflow-auto max-h-screen className="min-h-[calc(100vh-56px)] fixed trasnform bottom-0 top-14 z-[3000] min-w-[260px] bg-primary transition-all duration-300 ease-in-out ${
+        className={`overflow-auto max-h-screen className="min-h-[calc(100vh-56px)] fixed trasnform bottom-0 top-14 z-[3000] min-w-[260px] bg-primary dark:bg-[#212121] transition-all duration-300 ease-in-out ${
           isOpen
             ? "translate-x-0"
             : `${

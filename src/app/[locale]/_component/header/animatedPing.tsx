@@ -9,8 +9,8 @@ const AnimatedPing = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ring opacity-75 colors"></span>
-      <span className="relative inline-flex rounded-full h-2 w-2 bg-ring"></span>
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f55157] opacity-75 colors"></span>
+      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#f55157]"></span>
     </span>
   );
 };

@@ -48,7 +48,7 @@ const Breadcrumb = () => {
         <li>
           <Link
             href={`/${locale}`}
-            className="text-gray-500 hover:text-primary-1 flex items-center"
+            className="text-link-color hover:text-link-hover flex items-center me-2"
           >
             <Home size={16} />
           </Link>
@@ -56,14 +56,14 @@ const Breadcrumb = () => {
 
         {pathSegments.map((segment, index) => (
           <React.Fragment key={index}>
-            <ChevronIcon />
+            <span className="text-primary">/</span>
             <li>
               <Link
                 href={getSegmentUrl(index)}
-                className={`${
+                className={`text-sm ${
                   index === pathSegments.length - 1
-                    ? "text-primary-1 font-medium"
-                    : "text-gray-500 hover:text-primary-1"
+                    ? "text-gray-400 hover:text-link-hover"
+                    : "font-medium text-link-color hover:text-link-hover"
                 }`}
               >
                 {formatSegmentText(
@@ -74,7 +74,7 @@ const Breadcrumb = () => {
           </React.Fragment>
         ))}
       </ol>
-      <div className="bg-secondary-50 p-2 rounded-full max-h-7 text-sm text-primary-1 flex items-center gap-1 cursor-pointer hover:!bg-secondary-50 transition-colors">
+      <div className="bg-secondary-50 text-primary p-2 rounded-full max-h-7 text-sm flex items-center gap-1 cursor-pointer hover:!bg-secondary-50 transition-colors">
         <LifeBuoy size={17} />
         {t("help")}
         <ChevronDown size={17} className="ps-1 font-bold" />

@@ -51,7 +51,7 @@ const NavMobile = ({
         <DropdownMenuContent
           align={"start"}
           lang={isAr ? "Arabic" : "English"}
-          className="w-screen mt-2 border-t border-t-primary-1 right-0 left-0 shadow-md bg-primary text-white transform-none"
+          className="w-screen mt-2 border-t border-t-primary right-0 left-0 shadow-md bg-primary text-white transform-none"
         >
           <DropdownMenuGroup>
             {optionLinks &&

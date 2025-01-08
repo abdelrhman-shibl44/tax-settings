@@ -10,7 +10,6 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import Header from "@/app/[locale]/_component/header";
 import Sidebar from "@/app/[locale]/_component/sidebar";
 import { SidebarProvider } from "@/context/sidebar";
-import { headers } from "next/headers";
 import PageTitle from "./_component/PageTitle";
 import SearchForm from "./_component/header/navbar/search-form";
 import Footer from "./_component/Footer";
@@ -39,10 +38,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  const headersList = headers();
-  // read the custom x-url header
-  const header_url = (await headersList).get("x-url") || "";
-  console.log(header_url);
+
   const messages = await getMessages();
   // Ensure that the incoming `locale` is valid
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -68,11 +64,11 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <SidebarProvider>
-              <div className="w-full min-h-14">
+              <div className="w-full min-h-14 dark:bg-[#212121]">
                 <Header />
               </div>
               <Sidebar />
-              <main className="dark md:ms-64">
+              <main className="light md:ms-64">
                 <SearchForm className="md:hidden" />
                 <PageTitle />
                 {children}
