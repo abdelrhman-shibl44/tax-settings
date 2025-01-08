@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ChevronDown, ChevronRight, Home, LifeBuoy } from "lucide-react";
+import { ChevronDown, Home, LifeBuoy } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/routing";
 import { Messages } from "@/types/i18n";
@@ -10,7 +10,6 @@ import { Messages } from "@/types/i18n";
 const Breadcrumb = () => {
   const pathname = usePathname();
   const locale = useLocale();
-  const isRTL = locale === "ar";
   const t = useTranslations("sidebar.labels");
 
   // Split the path into segments and remove empty strings
@@ -30,13 +29,6 @@ const Breadcrumb = () => {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   };
-
-  const ChevronIcon = () => (
-    <ChevronRight
-      size={16}
-      className={`mx-2 text-gray-400 ${isRTL ? "rotate-180" : "rotate-0"}`}
-    />
-  );
 
   return (
     <nav

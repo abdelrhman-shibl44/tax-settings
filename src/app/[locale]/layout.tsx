@@ -68,7 +68,7 @@ export default async function RootLayout({
                 <Header />
               </div>
               <Sidebar />
-              <main className="light md:ms-64">
+              <main className="light md:ms-64 pb-[100px]">
                 <SearchForm className="md:hidden" />
                 <PageTitle />
                 {children}

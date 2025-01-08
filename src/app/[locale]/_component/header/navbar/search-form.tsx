@@ -54,7 +54,7 @@ export default function SearchForm({ className }: { className: string }) {
   };
 
   const initialState = {};
-  const [state, formAction, isPending] = useActionState(onSearch, initialState);
+  const [, formAction, isPending] = useActionState(onSearch, initialState);
   return (
     <form
       action={formAction}

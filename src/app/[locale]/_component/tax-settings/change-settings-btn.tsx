@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -22,7 +22,7 @@ import { DialogOverlay } from "@radix-ui/react-dialog";
 import { cn } from "@/lib/utils";
 
 const ChangeSettigsBtn = () => {
-  const [active, setActive] = useState(true);
+  // const [active, setActive] = useState(true);
   const locale = useLocale();
   const t = useTranslations("vat.change-settings-dialog");
   return (

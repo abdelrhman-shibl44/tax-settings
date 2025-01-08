@@ -9,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { usePathname, useRouter } from "@/i18n/routing";
 
 const languages = [
@@ -20,7 +19,6 @@ const languages = [
 export function LanguageSwitcher() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile();
   const pathname = usePathname();
 
   const switchLanguage = (locale: string) => {
