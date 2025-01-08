@@ -13,6 +13,8 @@ import { SidebarProvider } from "@/context/sidebar";
 import { headers } from "next/headers";
 import PageTitle from "./_component/PageTitle";
 import SearchForm from "./_component/header/navbar/search-form";
+import Footer from "./_component/Footer";
+import AlertBox from "./_component/Footer/AlertBox";
 
 const tajawal = Tajawal({
   subsets: ["latin", "arabic"],
@@ -75,6 +77,8 @@ export default async function RootLayout({
                 <PageTitle />
                 {children}
               </main>
+              <Footer />
+              <AlertBox />
             </SidebarProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
